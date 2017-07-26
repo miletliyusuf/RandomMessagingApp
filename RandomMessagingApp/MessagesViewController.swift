@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MessagesViewController.swift
 //  RandomMessagingApp
 //
 //  Created by Yusuf Miletli on 7/26/17.
@@ -8,18 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MessagesViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
-
-
+    
 }
-

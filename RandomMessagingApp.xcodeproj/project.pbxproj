@@ -10,11 +10,13 @@
 		1E84EB1FBC274C09ED964C9D /* Pods_RandomMessagingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2827280ACC062E7536C8 /* Pods_RandomMessagingAppTests.framework */; };
 		47734D0BBCB1D070BF137F1C /* Pods_RandomMessagingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4188C96739E1F827A24F2C /* Pods_RandomMessagingApp.framework */; };
 		88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5E21F28790D00816C21 /* AppDelegate.swift */; };
-		88B7D5E51F28790D00816C21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5E41F28790D00816C21 /* ViewController.swift */; };
 		88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E61F28790D00816C21 /* Main.storyboard */; };
 		88B7D5EA1F28790D00816C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E91F28790D00816C21 /* Assets.xcassets */; };
 		88B7D5ED1F28790D00816C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5EB1F28790D00816C21 /* LaunchScreen.storyboard */; };
 		88B7D5F81F28790D00816C21 /* RandomMessagingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5F71F28790D00816C21 /* RandomMessagingAppTests.swift */; };
+		88B7D6031F287BA000816C21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6021F287BA000816C21 /* BaseViewController.swift */; };
+		88B7D6061F287BC600816C21 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6051F287BC600816C21 /* InitialViewController.swift */; };
+		88B7D6081F287BD300816C21 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6071F287BD300816C21 /* MessagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,6 @@
 		50C2938EF43C57EC1726914C /* Pods-RandomMessagingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomMessagingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomMessagingApp/Pods-RandomMessagingApp.release.xcconfig"; sourceTree = "<group>"; };
 		88B7D5DF1F28790D00816C21 /* RandomMessagingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomMessagingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7D5E21F28790D00816C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88B7D5E41F28790D00816C21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88B7D5E71F28790D00816C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88B7D5E91F28790D00816C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B7D5EC1F28790D00816C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +42,9 @@
 		88B7D5F31F28790D00816C21 /* RandomMessagingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomMessagingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7D5F71F28790D00816C21 /* RandomMessagingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMessagingAppTests.swift; sourceTree = "<group>"; };
 		88B7D5F91F28790D00816C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B7D6021F287BA000816C21 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		88B7D6051F287BC600816C21 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		88B7D6071F287BD300816C21 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		94B850615BCCB5BBFFA17DF1 /* Pods-RandomMessagingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomMessagingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomMessagingAppTests/Pods-RandomMessagingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF0B45188A40E85C29DBA599 /* Pods-RandomMessagingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomMessagingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomMessagingAppTests/Pods-RandomMessagingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF5B2827280ACC062E7536C8 /* Pods_RandomMessagingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomMessagingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,8 +104,8 @@
 		88B7D5E11F28790D00816C21 /* RandomMessagingApp */ = {
 			isa = PBXGroup;
 			children = (
+				88B7D6041F287BAA00816C21 /* ViewControllers */,
 				88B7D5E21F28790D00816C21 /* AppDelegate.swift */,
-				88B7D5E41F28790D00816C21 /* ViewController.swift */,
 				88B7D5E61F28790D00816C21 /* Main.storyboard */,
 				88B7D5E91F28790D00816C21 /* Assets.xcassets */,
 				88B7D5EB1F28790D00816C21 /* LaunchScreen.storyboard */,
@@ -117,6 +121,16 @@
 				88B7D5F91F28790D00816C21 /* Info.plist */,
 			);
 			path = RandomMessagingAppTests;
+			sourceTree = "<group>";
+		};
+		88B7D6041F287BAA00816C21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88B7D6021F287BA000816C21 /* BaseViewController.swift */,
+				88B7D6051F287BC600816C21 /* InitialViewController.swift */,
+				88B7D6071F287BD300816C21 /* MessagesViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A05134695B3E4425053ACD19 /* Frameworks */ = {
@@ -332,8 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88B7D5E51F28790D00816C21 /* ViewController.swift in Sources */,
+				88B7D6081F287BD300816C21 /* MessagesViewController.swift in Sources */,
 				88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */,
+				88B7D6031F287BA000816C21 /* BaseViewController.swift in Sources */,
+				88B7D6061F287BC600816C21 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +565,7 @@
 				88B7D5FE1F28790D00816C21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88B7D5FF1F28790D00816C21 /* Build configuration list for PBXNativeTarget "RandomMessagingAppTests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +574,7 @@
 				88B7D6011F28790D00816C21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
