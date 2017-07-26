@@ -1,0 +1,6 @@
+framework module Pods_RandomMessagingAppTests {
+  umbrella header "Pods-RandomMessagingAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

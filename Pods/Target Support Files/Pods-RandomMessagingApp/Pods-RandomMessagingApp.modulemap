@@ -1,0 +1,6 @@
+framework module Pods_RandomMessagingApp {
+  umbrella header "Pods-RandomMessagingApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
