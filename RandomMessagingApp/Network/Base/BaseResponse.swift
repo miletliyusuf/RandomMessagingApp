@@ -19,9 +19,9 @@ class BaseResponse: Mappable {
     }
     
     class func newInstance(_ jsonString: String)-> AnyObject? {
-        
-        let obj = Mapper<BaseResponse>().map(JSONString: jsonString)
+		
+		let obj = Mapper<BaseResponse>().map(JSONString: jsonString)
         return obj
-        
+		
     }
 }

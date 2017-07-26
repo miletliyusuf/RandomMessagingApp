@@ -15,19 +15,11 @@ class InitialViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let r = MessagesRequest()
-        _ = MessagesDataService.messages(requestModel: r).subscribe(onNext: { (response) in
-			
-			if let messagesResponse:MessagesResponse = response as! MessagesResponse? {
-				print(messagesResponse.messages)
-			}
-			
-        }, onError: nil, onCompleted: nil, onDisposed: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
 }

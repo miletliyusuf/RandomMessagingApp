@@ -32,7 +32,4 @@ class MessageModel:BaseResponse {
 		user <- map["user"]
 	}
 	
-	override class func newInstance(_ jsonString: String)-> AnyObject? {
-		return Mapper<MessageModel>().map(JSONString: jsonString)
-	}
 }

@@ -10,7 +10,7 @@ import ObjectMapper
 
 class MessagesResponse: BaseResponse {
 	
-	var messages:Array<Any>?
+	var messages:[MessageModel]?
 	
 	required init?(map: Map) {
 		super.init(map: map)
@@ -21,7 +21,7 @@ class MessagesResponse: BaseResponse {
 	}
 	
 	override class func newInstance(_ jsonString: String)-> AnyObject? {
-		return Mapper<MessageModel>().map(JSONString: jsonString)
+		return Mapper<MessagesResponse>().map(JSONString: jsonString)
 	}
 
 	

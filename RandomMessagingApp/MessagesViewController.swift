@@ -29,6 +29,20 @@ class MessagesViewController: BaseViewController {
         self.tableViewMessages.delegate = self
         self.tableViewMessages.dataSource = self
     }
+	
+	//MARK: Requests
+	
+	func fetchFirstMessages() {
+		let r = MessagesRequest()
+		_ = MessagesDataService.messages(requestModel: r).subscribe(onNext: { (response) in
+			
+			if let messagesResponse:MessagesResponse = response as! MessagesResponse? {
+				
+			}
+			
+		}, onError: nil, onCompleted: nil, onDisposed: nil)
+		
+	}
     
 }
 
