@@ -8,6 +8,7 @@ target 'RandomMessagingApp' do
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
   pod 'RxSwift'
+  pod 'Kingfisher'
 
   target 'RandomMessagingAppTests' do
     inherit! :search_paths
