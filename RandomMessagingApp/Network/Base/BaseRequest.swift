@@ -33,7 +33,7 @@ class BaseRequest: Mappable {
         
     }
     
-    func responseModel() -> AnyObject {
+    func responseModel() -> BaseResponse.Type {
         return BaseResponse.self
     }
     
@@ -69,7 +69,7 @@ class BaseRequest: Mappable {
                 switch response.result {
                     case .success:
                         let utf8Text: String = String(data: response.data!, encoding: .utf8)!
-                        let responseClass:BaseResponse.Type = self.responseModel() as! BaseResponse.Type
+                        let responseClass:BaseResponse.Type = self.responseModel()
                         let obj = responseClass.newInstance(utf8Text)
                         
                         observer.onNext(obj)

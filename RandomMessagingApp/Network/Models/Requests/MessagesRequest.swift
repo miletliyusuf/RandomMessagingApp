@@ -18,8 +18,8 @@ class MessagesRequest: BaseRequest {
     override func mapping(map: Map) {
         super.mapping(map: map)
     }
-    
-    override func responseModel() -> AnyObject {
-        return MessageModel. as AnyObject
-    }
+	
+	override func responseModel() -> BaseResponse.Type {
+		return MessagesResponse.self
+	}
 }

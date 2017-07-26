@@ -14,22 +14,18 @@
 
 import ObjectMapper
 
-struct UserModel {
+class UserModel {
     var avatarUrl:String?
     var id:Int?
     var nickname:String?
-}
-
-extension UserModel:Mappable {
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        avatarUrl <- map["avatarUrl"]
-        id        <- map["id"]
-        nickname  <- map["nickname"]
-    }
-    
+	
+	required init?(map: Map) {
+		
+	}
+	
+	func mapping(map: Map) {
+		avatarUrl <- map["avatarUrl"]
+		id        <- map["id"]
+		nickname  <- map["nickname"]
+	}
 }

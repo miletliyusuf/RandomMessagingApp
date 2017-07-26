@@ -15,24 +15,24 @@
 
 import ObjectMapper
 
-struct MessageModel {
+class MessageModel:BaseResponse {
     var id:Int?
     var text:String?
     var timestamp:Int?
     var user:UserModel?
-}
-
-extension MessageModel:Mappable {
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        id <- map["id"]
-        text <- map["text"]
-        timestamp <- map["timestamp"]
-        user <- map["user"]
-    }
-    
+	
+	required init?(map: Map) {
+		super.init(map: map)
+	}
+	
+	override func mapping(map: Map) {
+		id <- map["id"]
+		text <- map["text"]
+		timestamp <- map["timestamp"]
+		user <- map["user"]
+	}
+	
+	override class func newInstance(_ jsonString: String)-> AnyObject? {
+		return Mapper<MessageModel>().map(JSONString: jsonString)
+	}
 }
