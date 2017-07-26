@@ -99,7 +99,8 @@
                                     <constraint firstItem="vVL-X7-GPQ" firstAttribute="top" secondItem="ecp-0e-ecs" secondAttribute="top" constant="13" id="Mvt-KT-35A"/>
                                     <constraint firstAttribute="bottom" secondItem="vVL-X7-GPQ" secondAttribute="bottom" constant="13" id="Wgb-Qq-yfp"/>
                                     <constraint firstAttribute="height" constant="56" id="afN-mt-mc1"/>
-                                    <constraint firstItem="4ju-EO-LS7" firstAttribute="leading" secondItem="vVL-X7-GPQ" secondAttribute="trailing" constant="8" id="kXv-l7-TuU"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ju-EO-LS7" secondAttribute="trailing" constant="8" id="jcD-yr-YV4"/>
+                                    <constraint firstItem="4ju-EO-LS7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vVL-X7-GPQ" secondAttribute="trailing" constant="8" symbolic="YES" id="kXv-l7-TuU"/>
                                     <constraint firstItem="vVL-X7-GPQ" firstAttribute="width" secondItem="ecp-0e-ecs" secondAttribute="width" multiplier="0.811" id="lCn-5N-FlQ"/>
                                 </constraints>
                             </view>
