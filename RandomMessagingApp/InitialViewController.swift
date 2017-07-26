@@ -9,11 +9,12 @@
 import UIKit
 
 class InitialViewController: BaseViewController {
-
+    
+    @IBOutlet weak var textFieldNickName:UITextField!
+    @IBOutlet weak var buttonContinue:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
