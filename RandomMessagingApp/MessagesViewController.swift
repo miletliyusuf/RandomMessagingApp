@@ -18,6 +18,7 @@ class MessagesViewController: BaseViewController {
     @IBOutlet weak var tableView:UITableView?
     @IBOutlet weak var textFieldMessage:UITextField?
     @IBOutlet weak var buttonSend:UIButton?
+    @IBOutlet var constKeypadBottom: NSLayoutConstraint?
     
     var receivedCell:MessageCell?
     var senderCell:MessageCell?
@@ -37,12 +38,16 @@ class MessagesViewController: BaseViewController {
         super.viewDidLoad()
         initTableView()
         fetchFirstMessages()
-        
+        addObserverToKeypad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: Custom Methods
@@ -51,7 +56,42 @@ class MessagesViewController: BaseViewController {
         self.tableView?.dataSource = self
         self.tableView?.registerXib(name: self.receivedCellIdentifier)
         self.tableView?.registerXib(name: self.senderCellIdentifier)
+        self.tableView?.estimatedRowHeight = 250
+        self.tableView?.rowHeight = UITableViewAutomaticDimension
     }
+    
+    func addObserverToKeypad() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardNotification(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillChangeFrame,
+                                               object: nil)
+    }
+    
+    func keyboardNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo {
+            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as?     NSValue)?.cgRectValue
+            let duration:TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+            let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
+            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions().rawValue
+            let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
+            if (endFrame?.origin.y)! >= UIScreen.main.bounds.size.height {
+                self.constKeypadBottom?.constant = 0.0
+            } else {
+                self.constKeypadBottom?.constant = endFrame?.size.height ?? 0.0
+            }
+            UIView.animate(withDuration: duration,
+                           delay: TimeInterval(0),
+                           options: animationCurve,
+                           animations: {
+                            self.view.layoutIfNeeded()
+                            if self.arrayMessages != nil {
+                                self.tableView?.scrollToRow(at: IndexPath.init(row: (self.arrayMessages?.count)! - 1, section: 0), at: .bottom, animated: true)
+                            }
+            },
+                           completion: nil)
+        }
+    }
+
 	
 	//MARK: Requests
 	
@@ -79,7 +119,8 @@ class MessagesViewController: BaseViewController {
 extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+            let cell:MessageCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier) as! MessageCell
+            return (10 / 7) * (cell.textViewMessage?.attributedText.size().height)!
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -86,12 +86,17 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ju-EO-LS7">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ju-EO-LS7">
                                         <rect key="frame" x="321" y="13" width="46" height="30"/>
                                         <color key="backgroundColor" red="0.17254902422428131" green="0.68627452850341797" blue="0.29411765933036804" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Send">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didSendButtonTapped:" destination="MSf-kG-wyO" eventType="touchUpInside" id="En0-Pw-Zpf"/>
                                         </connections>
@@ -124,6 +129,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonSend" destination="4ju-EO-LS7" id="6Ns-z4-VR3"/>
+                        <outlet property="constKeypadBottom" destination="nVZ-D7-Gxm" id="4Se-jb-moN"/>
                         <outlet property="tableView" destination="cit-XT-zrm" id="YRL-jt-A2B"/>
                         <outlet property="textFieldMessage" destination="vVL-X7-GPQ" id="7B0-dF-e2Q"/>
                     </connections>
