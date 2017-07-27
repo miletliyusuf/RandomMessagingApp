@@ -59,8 +59,14 @@ class MessagesViewController: BaseViewController {
 		self.tableView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MessagesViewController.didTableViewTapped)))
     }
 	
+	func sendMessage() {
+		let message = MessageModel(id: -1, text: (self.textViewMessageInput?.text)!, timestamp: NSDate().timeIntervalSince1970, user: user!)
+		self.arrayMessages!.append(message)
+		self.textViewMessageInput?.text = ""
+	}
+	
 	func didTableViewTapped() {
-		self.textViewMessageInput?.endEditing(true)
+		self.textViewMessageInput?.resignFirstResponder()
 	}
 	
 	func scrollToBottom(isAnimated status:Bool) {
@@ -116,9 +122,7 @@ class MessagesViewController: BaseViewController {
     
     //MARK: IBActions
     @IBAction func didSendButtonTapped(_ sender:UIButton) {
-        let message = MessageModel(id: -1, text: (self.textViewMessageInput?.text)!, timestamp: NSDate().timeIntervalSince1970, user: user!)
-        self.arrayMessages!.append(message)
-		self.textViewMessageInput?.text = ""
+		sendMessage()
     }
     
 }
@@ -129,6 +133,16 @@ extension MessagesViewController:UITextViewDelegate {
 	func textViewDidChange(_ textView: UITextView) {
 		textView.sizeThatFits(textView.contentSize)
 		scrollToBottom(isAnimated: false)
+	}
+	
+	func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+		if text == "\n" {
+			sendMessage()
+			return false
+		}
+		else {
+			return true
+		}
 	}
 	
 }
