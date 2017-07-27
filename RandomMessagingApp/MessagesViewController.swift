@@ -16,7 +16,7 @@ class MessagesViewController: BaseViewController {
     fileprivate let senderCellIdentifier = "SenderMessageCell"
     
     @IBOutlet weak var tableView:UITableView?
-    @IBOutlet weak var textFieldMessage:UITextField?
+    @IBOutlet weak var textViewMessageInput:UITextView?
     @IBOutlet weak var buttonSend:UIButton?
     @IBOutlet var constKeypadBottom: NSLayoutConstraint?
     
@@ -36,21 +36,19 @@ class MessagesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initTableView()
+		
+		self.textViewMessageInput?.delegate = self
+		self.initTableView()
         fetchFirstMessages()
         addObserverToKeypad()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: Custom Methods
+	
     func initTableView() {
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
@@ -109,10 +107,20 @@ class MessagesViewController: BaseViewController {
     
     //MARK: IBActions
     @IBAction func didSendButtonTapped(_ sender:UIButton) {
-        let message = MessageModel(id: -1, text: (self.textFieldMessage?.text)!, timestamp: NSDate().timeIntervalSince1970, user: user!)
+        let message = MessageModel(id: -1, text: (self.textViewMessageInput?.text)!, timestamp: NSDate().timeIntervalSince1970, user: user!)
         self.arrayMessages!.append(message)
+		self.textViewMessageInput?.text = ""
     }
     
+}
+
+//MARK: UITextViewDelegate
+extension MessagesViewController:UITextViewDelegate {
+	
+	func textViewDidChange(_ textView: UITextView) {
+		textView.sizeThatFits(textView.contentSize)
+	}
+	
 }
 
 //MARK: UITableViewDelegate,UITableViewDataSource
