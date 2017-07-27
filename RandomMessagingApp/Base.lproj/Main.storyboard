@@ -36,7 +36,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MSf-kG-wyO" kind="show" id="MsA-eJ-aS3"/>
+                                    <action selector="didContinueButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NoD-G8-0ZK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,7 +54,7 @@
                     <connections>
                         <outlet property="buttonContinue" destination="bvM-4G-JzG" id="Qgg-d3-Arv"/>
                         <outlet property="textFieldNickName" destination="TIM-iS-V7e" id="MAo-pu-FAD"/>
-                        <segue destination="MSf-kG-wyO" kind="show" id="nEF-Te-KfT"/>
+                        <segue destination="MSf-kG-wyO" kind="show" id="Hph-M7-E9A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,7 +64,7 @@
         <!--Messages View Controller-->
         <scene sceneID="w6Q-s5-eBx">
             <objects>
-                <viewController id="MSf-kG-wyO" customClass="MessagesViewController" customModule="RandomMessagingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessagesViewController" id="MSf-kG-wyO" customClass="MessagesViewController" customModule="RandomMessagingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SUm-5A-sJa"/>
                         <viewControllerLayoutGuide type="bottom" id="FhQ-ze-Tf7"/>
@@ -92,6 +92,9 @@
                                         <state key="normal" title="Send">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didSendButtonTapped:" destination="MSf-kG-wyO" eventType="touchUpInside" id="En0-Pw-Zpf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.27406257390975952" green="0.29036706686019897" blue="0.34299924969673157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,7 +151,4 @@
             <point key="canvasLocation" x="-23" y="-322"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nEF-Te-KfT"/>
-    </inferredMetricsTieBreakers>
 </document>

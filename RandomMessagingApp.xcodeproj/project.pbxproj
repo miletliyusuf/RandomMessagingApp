@@ -11,7 +11,7 @@
 		47734D0BBCB1D070BF137F1C /* Pods_RandomMessagingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4188C96739E1F827A24F2C /* Pods_RandomMessagingApp.framework */; };
 		880C49921F2931BE00162ECC /* MessagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49911F2931BE00162ECC /* MessagesResponse.swift */; };
 		886CD7871F29C376002BE119 /* ReceivedMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */; };
-		886CD7891F29C6BC002BE119 /* ReceivedMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD7881F29C6BC002BE119 /* ReceivedMessageCell.swift */; };
+		886CD7891F29C6BC002BE119 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD7881F29C6BC002BE119 /* MessageCell.swift */; };
 		886CD78B1F29CB20002BE119 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD78A1F29CB20002BE119 /* Extensions.swift */; };
 		88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5E21F28790D00816C21 /* AppDelegate.swift */; };
 		88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E61F28790D00816C21 /* Main.storyboard */; };
@@ -21,7 +21,6 @@
 		88B7D6031F287BA000816C21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6021F287BA000816C21 /* BaseViewController.swift */; };
 		88B7D6061F287BC600816C21 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6051F287BC600816C21 /* InitialViewController.swift */; };
 		88B7D6081F287BD300816C21 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6071F287BD300816C21 /* MessagesViewController.swift */; };
-		88BBDD721F29EBD900C74B62 /* SenderMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BBDD701F29EBD900C74B62 /* SenderMessageCell.swift */; };
 		88BBDD731F29EBD900C74B62 /* SenderMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BBDD711F29EBD900C74B62 /* SenderMessageCell.xib */; };
 		88CC60AF1F2892CA00045B45 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC60AE1F2892CA00045B45 /* BaseRequest.swift */; };
 		88CC60B31F28962400045B45 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC60B21F28962400045B45 /* UserModel.swift */; };
@@ -47,7 +46,7 @@
 		50C2938EF43C57EC1726914C /* Pods-RandomMessagingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomMessagingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomMessagingApp/Pods-RandomMessagingApp.release.xcconfig"; sourceTree = "<group>"; };
 		880C49911F2931BE00162ECC /* MessagesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesResponse.swift; sourceTree = "<group>"; };
 		886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedMessageCell.xib; sourceTree = "<group>"; };
-		886CD7881F29C6BC002BE119 /* ReceivedMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedMessageCell.swift; sourceTree = "<group>"; };
+		886CD7881F29C6BC002BE119 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		886CD78A1F29CB20002BE119 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		88B7D5DF1F28790D00816C21 /* RandomMessagingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomMessagingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7D5E21F28790D00816C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,12 +60,11 @@
 		88B7D6021F287BA000816C21 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		88B7D6051F287BC600816C21 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		88B7D6071F287BD300816C21 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
-		88BBDD701F29EBD900C74B62 /* SenderMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderMessageCell.swift; sourceTree = "<group>"; };
 		88BBDD711F29EBD900C74B62 /* SenderMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderMessageCell.xib; sourceTree = "<group>"; };
 		88CC60AE1F2892CA00045B45 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
-		88CC60B21F28962400045B45 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		88CC60B21F28962400045B45 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Responses/UserModel.swift; sourceTree = "<group>"; };
 		88CC60B41F28971700045B45 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		88CC60B51F2899FC00045B45 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		88CC60B51F2899FC00045B45 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageModel.swift; path = Responses/MessageModel.swift; sourceTree = "<group>"; };
 		88CC60BA1F28C5B000045B45 /* MessagesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesRequest.swift; sourceTree = "<group>"; };
 		88CC60BC1F28C67300045B45 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		88CC60BE1F28C91300045B45 /* MessagesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataService.swift; sourceTree = "<group>"; };
@@ -110,11 +108,19 @@
 			isa = PBXGroup;
 			children = (
 				886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */,
-				886CD7881F29C6BC002BE119 /* ReceivedMessageCell.swift */,
-				88BBDD701F29EBD900C74B62 /* SenderMessageCell.swift */,
 				88BBDD711F29EBD900C74B62 /* SenderMessageCell.xib */,
+				886CD7881F29C6BC002BE119 /* MessageCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		886CD78C1F2A0652002BE119 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				88CC60B51F2899FC00045B45 /* MessageModel.swift */,
+				88CC60B21F28962400045B45 /* UserModel.swift */,
+			);
+			name = Commons;
 			sourceTree = "<group>";
 		};
 		88B7D5D61F28790D00816C21 = {
@@ -195,6 +201,7 @@
 		88CC60AC1F28929E00045B45 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				886CD78C1F2A0652002BE119 /* Commons */,
 				88CC60B91F28AFDE00045B45 /* Responses */,
 				88CC60B71F28AFD000045B45 /* Requests */,
 			);
@@ -221,8 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				880C49911F2931BE00162ECC /* MessagesResponse.swift */,
-				88CC60B51F2899FC00045B45 /* MessageModel.swift */,
-				88CC60B21F28962400045B45 /* UserModel.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -442,9 +447,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				886CD7891F29C6BC002BE119 /* ReceivedMessageCell.swift in Sources */,
+				886CD7891F29C6BC002BE119 /* MessageCell.swift in Sources */,
 				88CC60BD1F28C67300045B45 /* BaseResponse.swift in Sources */,
-				88BBDD721F29EBD900C74B62 /* SenderMessageCell.swift in Sources */,
 				880C49921F2931BE00162ECC /* MessagesResponse.swift in Sources */,
 				88CC60B31F28962400045B45 /* UserModel.swift in Sources */,
 				88CC60BB1F28C5B000045B45 /* MessagesRequest.swift in Sources */,

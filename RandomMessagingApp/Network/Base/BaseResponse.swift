@@ -10,6 +10,10 @@ import ObjectMapper
 
 class BaseResponse: Mappable {
     
+    init() {
+        
+    }
+    
     func mapping(map: Map) {
         
     }

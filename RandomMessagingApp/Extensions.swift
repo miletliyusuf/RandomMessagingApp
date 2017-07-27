@@ -18,3 +18,14 @@ extension UITableView {
     }
     
 }
+
+extension Double {
+    func timestampToDateString() -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(self))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a MM/dd/YYYY"
+        dateFormatter.timeZone = TimeZone.current
+        let localDate = dateFormatter.string(from: date)
+        return localDate
+    }
+}

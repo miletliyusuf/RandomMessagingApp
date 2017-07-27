@@ -18,7 +18,7 @@ import ObjectMapper
 class MessageModel:BaseResponse {
     var id:Int?
     var text:String?
-    var timestamp:Int?
+    var timestamp:Double?
     var user:UserModel?
 	
 	required init?(map: Map) {
@@ -31,5 +31,13 @@ class MessageModel:BaseResponse {
 		timestamp <- map["timestamp"]
 		user <- map["user"]
 	}
+    
+    init(id:Int,text:String,timestamp:Double,user:UserModel) {
+        super.init()
+        self.id = id
+        self.text = text
+        self.timestamp = timestamp
+        self.user = user
+    }
 	
 }

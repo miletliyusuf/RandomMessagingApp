@@ -22,4 +22,11 @@ class InitialViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
 	
+    //MARK: IBActions
+    @IBAction func didContinueButtonTapped(_ sender:UIButton) {
+        let user:UserModel = UserModel(avatarUrl: "", id: -1, nickname: (self.textFieldNickName?.text)!)
+        let messagesController = self.storyboard?.instantiateViewController(withIdentifier: "MessagesViewController") as! MessagesViewController
+        messagesController.user = user
+        self.navigationController?.pushViewController(messagesController, animated: true)
+    }
 }

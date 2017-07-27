@@ -28,4 +28,10 @@ class UserModel {
 		id        <- map["id"]
 		nickname  <- map["nickname"]
 	}
+    
+    init(avatarUrl:String,id:Int,nickname:String) {
+        self.avatarUrl = avatarUrl
+        self.id = id
+        self.nickname = nickname
+    }
 }
