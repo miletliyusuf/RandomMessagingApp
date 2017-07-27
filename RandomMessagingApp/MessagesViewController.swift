@@ -11,12 +11,14 @@ import UIKit
 class MessagesViewController: BaseViewController {
     
     fileprivate let receivedCellIdentifier = "ReceivedMessageCell"
+    fileprivate let senderCellIdentifier = "SenderMessageCell"
     
     @IBOutlet weak var tableView:UITableView?
     @IBOutlet weak var textFieldMessage:UITextField?
     @IBOutlet weak var buttonSend:UIButton?
     
     var receivedCell:ReceivedMessageCell?
+    var senderCell:SenderMessageCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,7 @@ class MessagesViewController: BaseViewController {
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
         self.tableView?.registerXib(name: self.receivedCellIdentifier)
+        self.tableView?.registerXib(name: self.senderCellIdentifier)
     }
 	
 	//MARK: Requests
@@ -53,6 +56,10 @@ class MessagesViewController: BaseViewController {
 
 extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -62,7 +69,13 @@ extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        self.receivedCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier, for: indexPath) as? ReceivedMessageCell
-        return self.receivedCell!
+        switch indexPath.row {
+        case 0:
+            self.receivedCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier, for: indexPath) as? ReceivedMessageCell
+            return self.receivedCell!
+        default:
+            self.senderCell = tableView.dequeueReusableCell(withIdentifier: self.senderCellIdentifier, for: indexPath) as? SenderMessageCell
+            return self.senderCell!
+        }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ReceivedMessageCell.swift
+//  SenderMessageCell.swift
 //  RandomMessagingApp
 //
 //  Created by Yusuf Miletli on 7/27/17.
@@ -8,15 +8,11 @@
 
 import UIKit
 
-class ReceivedMessageCell: UITableViewCell {
-    
-    @IBOutlet weak var imageViewAvatar:UIImageView?
-    @IBOutlet weak var labelName:UILabel?
-    @IBOutlet weak var textViewMessage:UITextView?
-    @IBOutlet weak var labelDate:UILabel?
-    
+class SenderMessageCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,5 +20,5 @@ class ReceivedMessageCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

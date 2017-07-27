@@ -21,6 +21,8 @@
 		88B7D6031F287BA000816C21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6021F287BA000816C21 /* BaseViewController.swift */; };
 		88B7D6061F287BC600816C21 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6051F287BC600816C21 /* InitialViewController.swift */; };
 		88B7D6081F287BD300816C21 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6071F287BD300816C21 /* MessagesViewController.swift */; };
+		88BBDD721F29EBD900C74B62 /* SenderMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BBDD701F29EBD900C74B62 /* SenderMessageCell.swift */; };
+		88BBDD731F29EBD900C74B62 /* SenderMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BBDD711F29EBD900C74B62 /* SenderMessageCell.xib */; };
 		88CC60AF1F2892CA00045B45 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC60AE1F2892CA00045B45 /* BaseRequest.swift */; };
 		88CC60B31F28962400045B45 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC60B21F28962400045B45 /* UserModel.swift */; };
 		88CC60B61F2899FC00045B45 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC60B51F2899FC00045B45 /* MessageModel.swift */; };
@@ -59,6 +61,8 @@
 		88B7D6021F287BA000816C21 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		88B7D6051F287BC600816C21 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		88B7D6071F287BD300816C21 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		88BBDD701F29EBD900C74B62 /* SenderMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderMessageCell.swift; sourceTree = "<group>"; };
+		88BBDD711F29EBD900C74B62 /* SenderMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderMessageCell.xib; sourceTree = "<group>"; };
 		88CC60AE1F2892CA00045B45 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		88CC60B21F28962400045B45 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		88CC60B41F28971700045B45 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */,
 				886CD7881F29C6BC002BE119 /* ReceivedMessageCell.swift */,
+				88BBDD701F29EBD900C74B62 /* SenderMessageCell.swift */,
+				88BBDD711F29EBD900C74B62 /* SenderMessageCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 				88B7D5EA1F28790D00816C21 /* Assets.xcassets in Resources */,
 				88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */,
 				886CD7871F29C376002BE119 /* ReceivedMessageCell.xib in Resources */,
+				88BBDD731F29EBD900C74B62 /* SenderMessageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +444,7 @@
 			files = (
 				886CD7891F29C6BC002BE119 /* ReceivedMessageCell.swift in Sources */,
 				88CC60BD1F28C67300045B45 /* BaseResponse.swift in Sources */,
+				88BBDD721F29EBD900C74B62 /* SenderMessageCell.swift in Sources */,
 				880C49921F2931BE00162ECC /* MessagesResponse.swift in Sources */,
 				88CC60B31F28962400045B45 /* UserModel.swift in Sources */,
 				88CC60BB1F28C5B000045B45 /* MessagesRequest.swift in Sources */,
