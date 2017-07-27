@@ -8,9 +8,9 @@
 
 import ObjectMapper
 
-class BaseResponse: Mappable {
+class BaseResponse: NSObject,Mappable {
     
-    init() {
+    override init() {
         
     }
     

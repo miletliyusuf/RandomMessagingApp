@@ -12,21 +12,49 @@ class InitialViewController: BaseViewController {
     
     @IBOutlet weak var textFieldNickName:UITextField?
     @IBOutlet weak var buttonContinue:UIButton?
-    
+	
+	let viewModel = InitialViewModel.self
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.view.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(InitialViewController.didViewTapped)))
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.navigationController?.isNavigationBarHidden = true
+		
+		if viewModel.shared.checkUserAvailability() && MessagesViewModel.shared.didLeaveButtonTapped == false {
+			viewModel.shared.user = UserDefaultsHelper.user
+			viewModel.shared.pushToMessagesController(withNavigationController: self.navigationController!)
+		}
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		self.navigationController?.isNavigationBarHidden = false
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 	
+	//MARK: TapGesture Methods
+	func didViewTapped() {
+		self.textFieldNickName?.resignFirstResponder()
+	}
+	
     //MARK: IBActions
     @IBAction func didContinueButtonTapped(_ sender:UIButton) {
-        let user:UserModel = UserModel(avatarUrl: "", id: -1, nickname: (self.textFieldNickName?.text)!)
-        let messagesController = self.storyboard?.instantiateViewController(withIdentifier: "MessagesViewController") as! MessagesViewController
-        messagesController.user = user
-        self.navigationController?.pushViewController(messagesController, animated: true)
+		if viewModel.shared.canPassToMessageView(inputText: (self.textFieldNickName?.text)!) {
+			viewModel.shared.user = UserModel(avatarUrl: "person", id: Int(-1), nickname: (self.textFieldNickName?.text)!)
+			viewModel.shared.pushToMessagesController(withNavigationController: self.navigationController!)
+		}
+		else {
+			let alert = UIAlertController(title: "Error", message: "Nickname should be longer than two characters!", preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+			self.present(alert, animated: true, completion: nil)
+		}
     }
 }

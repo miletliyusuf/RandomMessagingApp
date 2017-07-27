@@ -14,7 +14,7 @@
 
 import ObjectMapper
 
-class UserModel:BaseResponse {
+class UserModel:BaseResponse,NSCoding {
     var avatarUrl:String?
     var id:Int?
     var nickname:String?
@@ -36,4 +36,18 @@ class UserModel:BaseResponse {
         self.id = id
         self.nickname = nickname
     }
+	
+	required convenience init(coder aDecoder: NSCoder) {
+		let avatarUrl = aDecoder.decodeObject(forKey: "avatarUrl") as! String
+		let id:Int = aDecoder.decodeObject(forKey: "id") as! Int
+		let nickname = aDecoder.decodeObject(forKey: "nickname") as! String
+		
+		self.init(avatarUrl: avatarUrl, id: id, nickname: nickname)
+	}
+	
+	func encode(with aCoder: NSCoder) {
+		aCoder.encode(avatarUrl, forKey: "avatarUrl")
+		aCoder.encode(id, forKey: "id")
+		aCoder.encode(nickname, forKey: "nickname")
+	}
 }

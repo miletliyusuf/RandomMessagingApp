@@ -33,15 +33,26 @@ class MessagesViewController: BaseViewController {
     }
     
     var user:UserModel?
-    
+	
+	let viewModel = MessagesViewModel.self
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		viewModel.shared.setNavigationBackTitle(forNavigationController: self.navigationController!,
+		                                        withString: "Leave")
+		title = (user?.nickname)!
 		self.textViewMessageInput?.delegate = self
-		self.initTableView()
+		
+		initTableView()
         fetchFirstMessages()
         addObserverToKeypad()
     }
+	
+	override func willMove(toParentViewController parent: UIViewController?) {
+		super.willMove(toParentViewController: parent)
+		viewModel.shared.didLeaveButtonTapped = true
+	}
 
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -123,6 +134,8 @@ class MessagesViewController: BaseViewController {
     //MARK: IBActions
     @IBAction func didSendButtonTapped(_ sender:UIButton) {
 		sendMessage()
+		self.buttonSend?.isEnabled = false
+		self.buttonSend?.alpha = 0.5
     }
     
 }
@@ -131,6 +144,9 @@ class MessagesViewController: BaseViewController {
 extension MessagesViewController:UITextViewDelegate {
 	
 	func textViewDidChange(_ textView: UITextView) {
+		let isSendButtonEnabled = viewModel.shared.isSendButtonEnabled(message: (textViewMessageInput?.text)!)
+		self.buttonSend?.isEnabled = isSendButtonEnabled
+		self.buttonSend?.alpha = isSendButtonEnabled ? 1 : 0.5
 		textView.sizeThatFits(textView.contentSize)
 		scrollToBottom(isAnimated: false)
 	}
@@ -166,7 +182,7 @@ extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
 			self.senderCell?.textViewMessage?.sizeToFit()
             self.senderCell?.labelDate?.text = instantMessage.timestamp?.timestampToDateString()
             self.senderCell?.labelName?.text = instantMessage.user?.nickname
-            self.senderCell?.imageViewAvatar?.image = UIImage(named: "person")
+            self.senderCell?.imageViewAvatar?.image = UIImage(named: (instantMessage.user?.avatarUrl)!)
             return self.senderCell!
         }
         else {
