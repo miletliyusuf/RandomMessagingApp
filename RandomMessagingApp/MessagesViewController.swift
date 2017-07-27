@@ -118,11 +118,11 @@ class MessagesViewController: BaseViewController {
 //MARK: UITableViewDelegate,UITableViewDataSource
 extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            let cell:MessageCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier) as! MessageCell
-            return (10 / 7) * (cell.textViewMessage?.attributedText.size().height)!
-    }
-    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//            let cell:MessageCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier) as! MessageCell
+//            return (10 / 7) * (cell.textViewMessage?.attributedText.size().height)!
+//    }
+	
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -136,6 +136,7 @@ extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
         if instantMessage.user?.id == user?.id {
             self.senderCell = tableView.dequeueReusableCell(withIdentifier: self.senderCellIdentifier, for: indexPath) as? MessageCell
             self.senderCell?.textViewMessage?.text = instantMessage.text!
+			self.senderCell?.textViewMessage?.sizeToFit()
             self.senderCell?.labelDate?.text = instantMessage.timestamp?.timestampToDateString()
             self.senderCell?.labelName?.text = instantMessage.user?.nickname
             self.senderCell?.imageViewAvatar?.image = UIImage(named: "person")
@@ -144,6 +145,7 @@ extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
         else {
             self.receivedCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier, for: indexPath) as? MessageCell
             self.receivedCell?.textViewMessage?.text = instantMessage.text!
+			self.receivedCell?.textViewMessage?.sizeToFit()
             self.receivedCell?.labelDate?.text = instantMessage.timestamp?.timestampToDateString()
             self.receivedCell?.labelName?.text = instantMessage.user?.nickname
             self.receivedCell?.imageViewAvatar?.kf.setImage(with: URL(string: (instantMessage.user?.avatarUrl)!))

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -51,6 +50,9 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLL-6D-WD5">
                         <rect key="frame" x="19" y="179" width="248" height="12.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12.5" id="kDa-Xn-Rif"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                         <color key="textColor" red="0.51372551919999998" green="0.52156865600000002" blue="0.55686277149999996" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -67,7 +69,6 @@
                     <constraint firstItem="t0u-aw-oPj" firstAttribute="leading" secondItem="S6q-Ll-BfO" secondAttribute="leading" constant="19" id="ie9-HZ-laf"/>
                     <constraint firstItem="Ss5-CH-ZOF" firstAttribute="leading" secondItem="qNf-Yf-1PA" secondAttribute="trailing" constant="21" id="jHQ-4V-XIu"/>
                     <constraint firstItem="Ss5-CH-ZOF" firstAttribute="leading" secondItem="t0u-aw-oPj" secondAttribute="trailing" constant="15" id="jwM-XV-9uv"/>
-                    <constraint firstItem="qNf-Yf-1PA" firstAttribute="height" secondItem="S6q-Ll-BfO" secondAttribute="height" multiplier="0.7" id="nr8-7e-ozz"/>
                     <constraint firstItem="BLL-6D-WD5" firstAttribute="top" secondItem="qNf-Yf-1PA" secondAttribute="bottom" constant="2.5" id="yjf-dK-tEJ"/>
                     <constraint firstItem="Ss5-CH-ZOF" firstAttribute="leading" secondItem="BLL-6D-WD5" secondAttribute="trailing" constant="25" id="zSn-oa-eGA"/>
                 </constraints>
