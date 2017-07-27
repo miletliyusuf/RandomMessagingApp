@@ -59,9 +59,7 @@ class InitialViewController: BaseViewController {
 			viewModel.shared.pushToMessagesController(withNavigationController: self.navigationController!)
 		}
 		else {
-			let alert = UIAlertController(title: "Error", message: "Nickname should be longer than two characters!", preferredStyle: .alert)
-			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-			self.present(alert, animated: true, completion: nil)
+			super.showAlert(withTitle: "Error", message: "Nickname should be longer than two characters!")
 		}
     }
 }

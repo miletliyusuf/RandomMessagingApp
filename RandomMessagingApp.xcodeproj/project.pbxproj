@@ -13,6 +13,7 @@
 		880C49951F2A6F2800162ECC /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49941F2A6F2800162ECC /* InitialViewModel.swift */; };
 		880C49971F2A7AB700162ECC /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49961F2A7AB700162ECC /* MessagesViewModel.swift */; };
 		880C499A1F2A811D00162ECC /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49991F2A811D00162ECC /* UserDefaultsHelper.swift */; };
+		880C499C1F2A90CC00162ECC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C499B1F2A90CC00162ECC /* LoadingView.swift */; };
 		886CD7871F29C376002BE119 /* ReceivedMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */; };
 		886CD7891F29C6BC002BE119 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD7881F29C6BC002BE119 /* MessageCell.swift */; };
 		886CD78B1F29CB20002BE119 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD78A1F29CB20002BE119 /* Extensions.swift */; };
@@ -51,6 +52,7 @@
 		880C49941F2A6F2800162ECC /* InitialViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		880C49961F2A7AB700162ECC /* MessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		880C49991F2A811D00162ECC /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		880C499B1F2A90CC00162ECC /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedMessageCell.xib; sourceTree = "<group>"; };
 		886CD7881F29C6BC002BE119 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		886CD78A1F29CB20002BE119 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				886CD78A1F29CB20002BE119 /* Extensions.swift */,
 				880C49991F2A811D00162ECC /* UserDefaultsHelper.swift */,
+				880C499B1F2A90CC00162ECC /* LoadingView.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				880C49951F2A6F2800162ECC /* InitialViewModel.swift in Sources */,
 				88CC60BD1F28C67300045B45 /* BaseResponse.swift in Sources */,
 				880C49921F2931BE00162ECC /* MessagesResponse.swift in Sources */,
+				880C499C1F2A90CC00162ECC /* LoadingView.swift in Sources */,
 				88CC60B31F28962400045B45 /* UserModel.swift in Sources */,
 				88CC60BB1F28C5B000045B45 /* MessagesRequest.swift in Sources */,
 				88CC60AF1F2892CA00045B45 /* BaseRequest.swift in Sources */,

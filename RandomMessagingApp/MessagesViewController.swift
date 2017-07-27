@@ -144,7 +144,9 @@ class MessagesViewController: BaseViewController {
                 self.arrayMessages = res.messages!
 			}
 			
-		}, onError: nil, onCompleted: nil, onDisposed: nil)
+		}, onError: { (error) in
+			super.showAlert(withTitle: "Error", message: error.localizedDescription)
+		}, onCompleted: nil, onDisposed: nil)
 		
 	}
     

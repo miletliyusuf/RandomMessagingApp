@@ -49,9 +49,14 @@ class BaseRequest: Mappable {
         let obj = Mapper<BaseRequest>().map(JSONString: jsonString)
         return obj
     }
-    
+	
+	struct ApiManagerError : Error{
+		var error: Error?
+		var message: String?
+	}
+	
     func startRequest() -> Observable<AnyObject?> {
-        
+		
         return Observable.create({ observer in
             let url:URL = URL(string: "\(APP_SRV)\(self.reqEndPointAndType().0)")!
             let method:HTTPMethod = self.reqEndPointAndType().1
@@ -64,8 +69,11 @@ class BaseRequest: Mappable {
             if params.count > 0 {
                 req.httpBody = try! JSONSerialization.data(withJSONObject: params)
             }
-            
-            let r = Alamofire.request(req).validate(statusCode: 200..<300).responseData{response in
+			
+			LoadingView.showActivityIndicator()
+			
+            let r = Alamofire.request(req).validate(statusCode: 200..<300).responseData{ response in
+				
                 switch response.result {
                     case .success:
                         let utf8Text: String = String(data: response.data!, encoding: .utf8)!
@@ -74,9 +82,14 @@ class BaseRequest: Mappable {
                         
                         observer.onNext(obj)
                         observer.onCompleted()
+						LoadingView.hideActivityIndicator()
                     case .failure:
-                        observer.onNext(nil)
+						var apiError:ApiManagerError = ApiManagerError()
+						apiError.error = response.error
+						apiError.message = response.error?.localizedDescription
+                        observer.onNext(apiError as AnyObject)
                         observer.onCompleted()
+						LoadingView.hideActivityIndicator()
                 }
             }
             
