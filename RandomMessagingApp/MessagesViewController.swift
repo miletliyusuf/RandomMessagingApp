@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import Kingfisher
 
 class MessagesViewController: BaseViewController {
     
@@ -23,11 +24,10 @@ class MessagesViewController: BaseViewController {
     
     var arrayMessages:[MessageModel]? {
         didSet{
-//            self.tableView?.beginUpdates()
-//            self.tableView?.reloadRows(at: [IndexPath(row: self.arrayMessages!.count - 1, section: 0)], with: .top)
-//            self.tableView?.insertRows(at: [IndexPath(row: self.arrayMessages.count - 1, section: 0)], with: .top)
-//            self.tableView?.reloadRows(at: (self.tableView?.indexPathsForVisibleRows)!, with: .top)
-//            self.tableView?.endUpdates()
+            if (self.arrayMessages?.count)! > 0 {
+                self.tableView?.reloadData()
+                self.tableView?.scrollToRow(at: IndexPath.init(row: (self.arrayMessages?.count)! - 1, section: 0), at: .bottom, animated: true)
+            }
         }
     }
     
@@ -61,7 +61,6 @@ class MessagesViewController: BaseViewController {
 			 
 			if let res:MessagesResponse = response as! MessagesResponse? {
                 self.arrayMessages = res.messages!
-                self.tableView?.reloadData()
 			}
 			
 		}, onError: nil, onCompleted: nil, onDisposed: nil)
@@ -70,7 +69,7 @@ class MessagesViewController: BaseViewController {
     
     //MARK: IBActions
     @IBAction func didSendButtonTapped(_ sender:UIButton) {
-        let message = MessageModel(id: -1, text: (self.textFieldMessage?.text)!, timestamp: NSDate().timeIntervalSince1970 * 1000, user: user!)
+        let message = MessageModel(id: -1, text: (self.textFieldMessage?.text)!, timestamp: NSDate().timeIntervalSince1970, user: user!)
         self.arrayMessages!.append(message)
     }
     
@@ -92,13 +91,22 @@ extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
-            self.receivedCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier, for: indexPath) as? MessageCell
-            return self.receivedCell!
-        default:
+        let instantMessage:MessageModel = self.arrayMessages![indexPath.row]
+        if instantMessage.user?.id == user?.id {
             self.senderCell = tableView.dequeueReusableCell(withIdentifier: self.senderCellIdentifier, for: indexPath) as? MessageCell
+            self.senderCell?.textViewMessage?.text = instantMessage.text!
+            self.senderCell?.labelDate?.text = instantMessage.timestamp?.timestampToDateString()
+            self.senderCell?.labelName?.text = instantMessage.user?.nickname
+            self.senderCell?.imageViewAvatar?.image = UIImage(named: "person")
             return self.senderCell!
+        }
+        else {
+            self.receivedCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier, for: indexPath) as? MessageCell
+            self.receivedCell?.textViewMessage?.text = instantMessage.text!
+            self.receivedCell?.labelDate?.text = instantMessage.timestamp?.timestampToDateString()
+            self.receivedCell?.labelName?.text = instantMessage.user?.nickname
+            self.receivedCell?.imageViewAvatar?.kf.setImage(with: URL(string: (instantMessage.user?.avatarUrl)!))
+            return self.receivedCell!
         }
     }
 }

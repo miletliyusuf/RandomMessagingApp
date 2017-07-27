@@ -14,22 +14,24 @@
 
 import ObjectMapper
 
-class UserModel {
+class UserModel:BaseResponse {
     var avatarUrl:String?
     var id:Int?
     var nickname:String?
 	
 	required init?(map: Map) {
-		
+		super.init(map: map)
 	}
 	
-	func mapping(map: Map) {
+	override func mapping(map: Map) {
+        super.mapping(map: map)
 		avatarUrl <- map["avatarUrl"]
 		id        <- map["id"]
 		nickname  <- map["nickname"]
 	}
     
     init(avatarUrl:String,id:Int,nickname:String) {
+        super.init()
         self.avatarUrl = avatarUrl
         self.id = id
         self.nickname = nickname
