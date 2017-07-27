@@ -27,7 +27,7 @@ class MessagesViewController: BaseViewController {
         didSet{
             if (self.arrayMessages?.count)! > 0 {
                 self.tableView?.reloadData()
-                self.tableView?.scrollToRow(at: IndexPath.init(row: (self.arrayMessages?.count)! - 1, section: 0), at: .bottom, animated: true)
+				self.scrollToBottom(isAnimated: true)
             }
         }
     }
@@ -56,8 +56,19 @@ class MessagesViewController: BaseViewController {
         self.tableView?.registerXib(name: self.senderCellIdentifier)
         self.tableView?.estimatedRowHeight = 250
         self.tableView?.rowHeight = UITableViewAutomaticDimension
+		self.tableView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MessagesViewController.didTableViewTapped)))
     }
-    
+	
+	func didTableViewTapped() {
+		self.textViewMessageInput?.endEditing(true)
+	}
+	
+	func scrollToBottom(isAnimated status:Bool) {
+		if self.arrayMessages != nil {
+			self.tableView?.scrollToRow(at: IndexPath.init(row: (self.arrayMessages?.count)! - 1, section: 0), at: .bottom, animated: status)
+		}
+	}
+	
     func addObserverToKeypad() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardNotification(_:)),
@@ -81,10 +92,8 @@ class MessagesViewController: BaseViewController {
                            delay: TimeInterval(0),
                            options: animationCurve,
                            animations: {
-                            self.view.layoutIfNeeded()
-                            if self.arrayMessages != nil {
-                                self.tableView?.scrollToRow(at: IndexPath.init(row: (self.arrayMessages?.count)! - 1, section: 0), at: .bottom, animated: true)
-                            }
+							self.view.layoutIfNeeded()
+							self.scrollToBottom(isAnimated: true)
             },
                            completion: nil)
         }
@@ -119,6 +128,7 @@ extension MessagesViewController:UITextViewDelegate {
 	
 	func textViewDidChange(_ textView: UITextView) {
 		textView.sizeThatFits(textView.contentSize)
+		scrollToBottom(isAnimated: false)
 	}
 	
 }

@@ -102,12 +102,17 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.27406257390975952" green="0.29036706686019897" blue="0.34299924969673157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="4ju-EO-LS7" firstAttribute="centerY" secondItem="ecp-0e-ecs" secondAttribute="centerY" id="2fL-aV-uHa"/>
                                     <constraint firstItem="4ju-EO-LS7" firstAttribute="leading" secondItem="gWl-Kj-e0o" secondAttribute="trailing" constant="18" id="77L-7B-i8w"/>
+                                    <constraint firstAttribute="bottom" secondItem="4ju-EO-LS7" secondAttribute="bottom" constant="10.5" id="AYd-KE-ZhA"/>
                                     <constraint firstAttribute="bottom" secondItem="gWl-Kj-e0o" secondAttribute="bottom" constant="7.5" id="KpB-8a-fhC"/>
                                     <constraint firstAttribute="trailing" secondItem="4ju-EO-LS7" secondAttribute="trailing" constant="8" id="jcD-yr-YV4"/>
                                     <constraint firstItem="gWl-Kj-e0o" firstAttribute="top" secondItem="ecp-0e-ecs" secondAttribute="top" constant="12" id="nbL-gE-djC"/>
