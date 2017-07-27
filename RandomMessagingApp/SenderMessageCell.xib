@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,15 +20,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="Ss5-CH-ZOF">
-                        <rect key="frame" x="292" y="8" width="75" height="75"/>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="Ss5-CH-ZOF">
+                        <rect key="frame" x="311" y="8" width="56" height="56.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="75" id="Fiu-ia-Zvj"/>
                             <constraint firstAttribute="width" secondItem="Ss5-CH-ZOF" secondAttribute="height" multiplier="1:1" id="pou-GE-w4J"/>
                         </constraints>
                     </imageView>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qNf-Yf-1PA">
-                        <rect key="frame" x="19" y="37" width="252" height="139.5"/>
+                        <rect key="frame" x="19" y="37" width="271" height="139.5"/>
                         <color key="backgroundColor" red="0.62219500539999995" green="0.77445775269999995" blue="0.90779453519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,7 +40,7 @@
                         </userDefinedRuntimeAttributes>
                     </textView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0u-aw-oPj">
-                        <rect key="frame" x="19" y="11" width="258" height="18"/>
+                        <rect key="frame" x="19" y="11" width="277" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="gg0-rh-iEc"/>
                         </constraints>
@@ -49,7 +49,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLL-6D-WD5">
-                        <rect key="frame" x="19" y="179" width="248" height="12.5"/>
+                        <rect key="frame" x="19" y="179" width="267" height="12.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12.5" id="kDa-Xn-Rif"/>
                         </constraints>
@@ -62,6 +62,7 @@
                     <constraint firstItem="t0u-aw-oPj" firstAttribute="top" secondItem="S6q-Ll-BfO" secondAttribute="top" constant="11" id="1rk-rV-f3h"/>
                     <constraint firstAttribute="trailing" secondItem="Ss5-CH-ZOF" secondAttribute="trailing" constant="8" id="97U-SJ-mNe"/>
                     <constraint firstAttribute="bottom" secondItem="BLL-6D-WD5" secondAttribute="bottom" constant="8" id="Df8-dn-Oxl"/>
+                    <constraint firstItem="Ss5-CH-ZOF" firstAttribute="width" secondItem="S6q-Ll-BfO" secondAttribute="width" multiplier="0.15" id="Fem-3f-hPT"/>
                     <constraint firstItem="Ss5-CH-ZOF" firstAttribute="top" secondItem="S6q-Ll-BfO" secondAttribute="top" constant="8" id="Scr-ob-0N4"/>
                     <constraint firstItem="qNf-Yf-1PA" firstAttribute="leading" secondItem="S6q-Ll-BfO" secondAttribute="leading" constant="19" id="VAH-Ms-aPj"/>
                     <constraint firstItem="BLL-6D-WD5" firstAttribute="leading" secondItem="S6q-Ll-BfO" secondAttribute="leading" constant="19" id="WgY-2f-cSD"/>

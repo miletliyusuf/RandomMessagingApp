@@ -117,11 +117,6 @@ class MessagesViewController: BaseViewController {
 
 //MARK: UITableViewDelegate,UITableViewDataSource
 extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//            let cell:MessageCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier) as! MessageCell
-//            return (10 / 7) * (cell.textViewMessage?.attributedText.size().height)!
-//    }
 	
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
