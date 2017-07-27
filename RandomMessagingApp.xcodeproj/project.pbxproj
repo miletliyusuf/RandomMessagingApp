@@ -10,6 +10,9 @@
 		1E84EB1FBC274C09ED964C9D /* Pods_RandomMessagingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B2827280ACC062E7536C8 /* Pods_RandomMessagingAppTests.framework */; };
 		47734D0BBCB1D070BF137F1C /* Pods_RandomMessagingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4188C96739E1F827A24F2C /* Pods_RandomMessagingApp.framework */; };
 		880C49921F2931BE00162ECC /* MessagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49911F2931BE00162ECC /* MessagesResponse.swift */; };
+		886CD7871F29C376002BE119 /* ReceivedMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */; };
+		886CD7891F29C6BC002BE119 /* ReceivedMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD7881F29C6BC002BE119 /* ReceivedMessageCell.swift */; };
+		886CD78B1F29CB20002BE119 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD78A1F29CB20002BE119 /* Extensions.swift */; };
 		88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5E21F28790D00816C21 /* AppDelegate.swift */; };
 		88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E61F28790D00816C21 /* Main.storyboard */; };
 		88B7D5EA1F28790D00816C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E91F28790D00816C21 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 		4C4188C96739E1F827A24F2C /* Pods_RandomMessagingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomMessagingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C2938EF43C57EC1726914C /* Pods-RandomMessagingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomMessagingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomMessagingApp/Pods-RandomMessagingApp.release.xcconfig"; sourceTree = "<group>"; };
 		880C49911F2931BE00162ECC /* MessagesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesResponse.swift; sourceTree = "<group>"; };
+		886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedMessageCell.xib; sourceTree = "<group>"; };
+		886CD7881F29C6BC002BE119 /* ReceivedMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedMessageCell.swift; sourceTree = "<group>"; };
+		886CD78A1F29CB20002BE119 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		88B7D5DF1F28790D00816C21 /* RandomMessagingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomMessagingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7D5E21F28790D00816C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B7D5E71F28790D00816C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +102,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		886CD7851F29C2EC002BE119 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */,
+				886CD7881F29C6BC002BE119 /* ReceivedMessageCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		88B7D5D61F28790D00816C21 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +134,8 @@
 		88B7D5E11F28790D00816C21 /* RandomMessagingApp */ = {
 			isa = PBXGroup;
 			children = (
+				886CD78A1F29CB20002BE119 /* Extensions.swift */,
+				886CD7851F29C2EC002BE119 /* Views */,
 				88CC60AA1F28928100045B45 /* Network */,
 				88B7D6041F287BAA00816C21 /* ViewControllers */,
 				88B7D5E21F28790D00816C21 /* AppDelegate.swift */,
@@ -307,6 +324,7 @@
 				88B7D5ED1F28790D00816C21 /* LaunchScreen.storyboard in Resources */,
 				88B7D5EA1F28790D00816C21 /* Assets.xcassets in Resources */,
 				88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */,
+				886CD7871F29C376002BE119 /* ReceivedMessageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886CD7891F29C6BC002BE119 /* ReceivedMessageCell.swift in Sources */,
 				88CC60BD1F28C67300045B45 /* BaseResponse.swift in Sources */,
 				880C49921F2931BE00162ECC /* MessagesResponse.swift in Sources */,
 				88CC60B31F28962400045B45 /* UserModel.swift in Sources */,
@@ -424,6 +443,7 @@
 				88CC60AF1F2892CA00045B45 /* BaseRequest.swift in Sources */,
 				88CC60B61F2899FC00045B45 /* MessageModel.swift in Sources */,
 				88B7D6081F287BD300816C21 /* MessagesViewController.swift in Sources */,
+				886CD78B1F29CB20002BE119 /* Extensions.swift in Sources */,
 				88B7D5E31F28790D00816C21 /* AppDelegate.swift in Sources */,
 				88B7D6031F287BA000816C21 /* BaseViewController.swift in Sources */,
 				88B7D6061F287BC600816C21 /* InitialViewController.swift in Sources */,

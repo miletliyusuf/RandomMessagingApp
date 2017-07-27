@@ -10,9 +10,13 @@ import UIKit
 
 class MessagesViewController: BaseViewController {
     
-    @IBOutlet weak var tableViewMessages:UITableView!
-    @IBOutlet weak var textFieldMessage:UITextField!
-    @IBOutlet weak var buttonSend:UIButton!
+    fileprivate let receivedCellIdentifier = "ReceivedMessageCell"
+    
+    @IBOutlet weak var tableView:UITableView?
+    @IBOutlet weak var textFieldMessage:UITextField?
+    @IBOutlet weak var buttonSend:UIButton?
+    
+    var receivedCell:ReceivedMessageCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +30,9 @@ class MessagesViewController: BaseViewController {
     
     //MARK: Custom Methods
     func initTableView() {
-        self.tableViewMessages.delegate = self
-        self.tableViewMessages.dataSource = self
+        self.tableView?.delegate = self
+        self.tableView?.dataSource = self
+        self.tableView?.registerXib(name: self.receivedCellIdentifier)
     }
 	
 	//MARK: Requests
@@ -57,6 +62,7 @@ extension MessagesViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        self.receivedCell = tableView.dequeueReusableCell(withIdentifier: self.receivedCellIdentifier, for: indexPath) as? ReceivedMessageCell
+        return self.receivedCell!
     }
 }
