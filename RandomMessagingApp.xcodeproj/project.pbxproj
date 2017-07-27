@@ -14,6 +14,8 @@
 		880C49971F2A7AB700162ECC /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49961F2A7AB700162ECC /* MessagesViewModel.swift */; };
 		880C499A1F2A811D00162ECC /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49991F2A811D00162ECC /* UserDefaultsHelper.swift */; };
 		880C499C1F2A90CC00162ECC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C499B1F2A90CC00162ECC /* LoadingView.swift */; };
+		880C49AC1F2A94D400162ECC /* InitialViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49AB1F2A94D400162ECC /* InitialViewUITests.swift */; };
+		880C49AE1F2A97CA00162ECC /* MessagesViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49AD1F2A97CA00162ECC /* MessagesViewUITests.swift */; };
 		886CD7871F29C376002BE119 /* ReceivedMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */; };
 		886CD7891F29C6BC002BE119 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD7881F29C6BC002BE119 /* MessageCell.swift */; };
 		886CD78B1F29CB20002BE119 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD78A1F29CB20002BE119 /* Extensions.swift */; };
@@ -35,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		880C49A61F2A934500162ECC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88B7D5D71F28790D00816C21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88B7D5DE1F28790D00816C21;
+			remoteInfo = RandomMessagingApp;
+		};
 		88B7D5F41F28790D00816C21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88B7D5D71F28790D00816C21 /* Project object */;
@@ -53,6 +62,10 @@
 		880C49961F2A7AB700162ECC /* MessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		880C49991F2A811D00162ECC /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		880C499B1F2A90CC00162ECC /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		880C49A11F2A934500162ECC /* RandomMessagingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomMessagingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		880C49A51F2A934500162ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		880C49AB1F2A94D400162ECC /* InitialViewUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewUITests.swift; sourceTree = "<group>"; };
+		880C49AD1F2A97CA00162ECC /* MessagesViewUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewUITests.swift; sourceTree = "<group>"; };
 		886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedMessageCell.xib; sourceTree = "<group>"; };
 		886CD7881F29C6BC002BE119 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		886CD78A1F29CB20002BE119 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -82,6 +95,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		880C499E1F2A934500162ECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88B7D5DC1F28790D00816C21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +151,16 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		880C49A21F2A934500162ECC /* RandomMessagingAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				880C49AB1F2A94D400162ECC /* InitialViewUITests.swift */,
+				880C49A51F2A934500162ECC /* Info.plist */,
+				880C49AD1F2A97CA00162ECC /* MessagesViewUITests.swift */,
+			);
+			path = RandomMessagingAppUITests;
+			sourceTree = "<group>";
+		};
 		886CD7851F29C2EC002BE119 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +185,7 @@
 			children = (
 				88B7D5E11F28790D00816C21 /* RandomMessagingApp */,
 				88B7D5F61F28790D00816C21 /* RandomMessagingAppTests */,
+				880C49A21F2A934500162ECC /* RandomMessagingAppUITests */,
 				88B7D5E01F28790D00816C21 /* Products */,
 				14CE6815C498708F993762A2 /* Pods */,
 				A05134695B3E4425053ACD19 /* Frameworks */,
@@ -166,6 +197,7 @@
 			children = (
 				88B7D5DF1F28790D00816C21 /* RandomMessagingApp.app */,
 				88B7D5F31F28790D00816C21 /* RandomMessagingAppTests.xctest */,
+				880C49A11F2A934500162ECC /* RandomMessagingAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,6 +304,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		880C49A01F2A934500162ECC /* RandomMessagingAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 880C49A81F2A934500162ECC /* Build configuration list for PBXNativeTarget "RandomMessagingAppUITests" */;
+			buildPhases = (
+				880C499D1F2A934500162ECC /* Sources */,
+				880C499E1F2A934500162ECC /* Frameworks */,
+				880C499F1F2A934500162ECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				880C49A71F2A934500162ECC /* PBXTargetDependency */,
+			);
+			name = RandomMessagingAppUITests;
+			productName = RandomMessagingAppUITests;
+			productReference = 880C49A11F2A934500162ECC /* RandomMessagingAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		88B7D5DE1F28790D00816C21 /* RandomMessagingApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88B7D5FC1F28790D00816C21 /* Build configuration list for PBXNativeTarget "RandomMessagingApp" */;
@@ -323,9 +373,15 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Miletli;
 				TargetAttributes = {
+					880C49A01F2A934500162ECC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2U6BY5FFH9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 88B7D5DE1F28790D00816C21;
+					};
 					88B7D5DE1F28790D00816C21 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = FDQWYD8S6L;
+						DevelopmentTeam = 2U6BY5FFH9;
 						ProvisioningStyle = Automatic;
 					};
 					88B7D5F21F28790D00816C21 = {
@@ -351,11 +407,19 @@
 			targets = (
 				88B7D5DE1F28790D00816C21 /* RandomMessagingApp */,
 				88B7D5F21F28790D00816C21 /* RandomMessagingAppTests */,
+				880C49A01F2A934500162ECC /* RandomMessagingAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		880C499F1F2A934500162ECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88B7D5DD1F28790D00816C21 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,6 +535,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		880C499D1F2A934500162ECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				880C49AE1F2A97CA00162ECC /* MessagesViewUITests.swift in Sources */,
+				880C49AC1F2A94D400162ECC /* InitialViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88B7D5DB1F28790D00816C21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,6 +579,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		880C49A71F2A934500162ECC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88B7D5DE1F28790D00816C21 /* RandomMessagingApp */;
+			targetProxy = 880C49A61F2A934500162ECC /* PBXContainerItemProxy */;
+		};
 		88B7D5F51F28790D00816C21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 88B7D5DE1F28790D00816C21 /* RandomMessagingApp */;
@@ -533,6 +611,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		880C49A91F2A934500162ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 2U6BY5FFH9;
+				INFOPLIST_FILE = RandomMessagingAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymiletli.cepfali.RandomMessagingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = RandomMessagingApp;
+			};
+			name = Debug;
+		};
+		880C49AA1F2A934500162ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 2U6BY5FFH9;
+				INFOPLIST_FILE = RandomMessagingAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymiletli.cepfali.RandomMessagingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = RandomMessagingApp;
+			};
+			name = Release;
+		};
 		88B7D5FA1F28790D00816C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -633,7 +737,7 @@
 			baseConfigurationReference = 3FA6DF4971A6588DD960EC06 /* Pods-RandomMessagingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FDQWYD8S6L;
+				DEVELOPMENT_TEAM = 2U6BY5FFH9;
 				INFOPLIST_FILE = RandomMessagingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ymiletlli.RandomMessagingApp;
@@ -647,7 +751,7 @@
 			baseConfigurationReference = 50C2938EF43C57EC1726914C /* Pods-RandomMessagingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FDQWYD8S6L;
+				DEVELOPMENT_TEAM = 2U6BY5FFH9;
 				INFOPLIST_FILE = RandomMessagingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ymiletlli.RandomMessagingApp;
@@ -691,6 +795,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		880C49A81F2A934500162ECC /* Build configuration list for PBXNativeTarget "RandomMessagingAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				880C49A91F2A934500162ECC /* Debug */,
+				880C49AA1F2A934500162ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		88B7D5DA1F28790D00816C21 /* Build configuration list for PBXProject "RandomMessagingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

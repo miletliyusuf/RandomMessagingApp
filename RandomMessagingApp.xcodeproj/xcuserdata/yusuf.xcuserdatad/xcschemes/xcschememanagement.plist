@@ -7,11 +7,21 @@
 		<key>RandomMessagingApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>0</integer>
+		</dict>
+		<key>RandomMessagingAppUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>880C49A01F2A934500162ECC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88B7D5DE1F28790D00816C21</key>
 		<dict>
 			<key>primary</key>
