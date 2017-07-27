@@ -16,6 +16,8 @@
 		880C499C1F2A90CC00162ECC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C499B1F2A90CC00162ECC /* LoadingView.swift */; };
 		880C49AC1F2A94D400162ECC /* InitialViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49AB1F2A94D400162ECC /* InitialViewUITests.swift */; };
 		880C49AE1F2A97CA00162ECC /* MessagesViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49AD1F2A97CA00162ECC /* MessagesViewUITests.swift */; };
+		880C49B11F2A9B6D00162ECC /* InitialViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49B01F2A9B6D00162ECC /* InitialViewModelTests.swift */; };
+		880C49B71F2A9DDF00162ECC /* MessagesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C49B61F2A9DDF00162ECC /* MessagesViewModelTests.swift */; };
 		886CD7871F29C376002BE119 /* ReceivedMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */; };
 		886CD7891F29C6BC002BE119 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD7881F29C6BC002BE119 /* MessageCell.swift */; };
 		886CD78B1F29CB20002BE119 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CD78A1F29CB20002BE119 /* Extensions.swift */; };
@@ -23,7 +25,6 @@
 		88B7D5E81F28790D00816C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E61F28790D00816C21 /* Main.storyboard */; };
 		88B7D5EA1F28790D00816C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5E91F28790D00816C21 /* Assets.xcassets */; };
 		88B7D5ED1F28790D00816C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7D5EB1F28790D00816C21 /* LaunchScreen.storyboard */; };
-		88B7D5F81F28790D00816C21 /* RandomMessagingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D5F71F28790D00816C21 /* RandomMessagingAppTests.swift */; };
 		88B7D6031F287BA000816C21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6021F287BA000816C21 /* BaseViewController.swift */; };
 		88B7D6061F287BC600816C21 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6051F287BC600816C21 /* InitialViewController.swift */; };
 		88B7D6081F287BD300816C21 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D6071F287BD300816C21 /* MessagesViewController.swift */; };
@@ -66,6 +67,8 @@
 		880C49A51F2A934500162ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		880C49AB1F2A94D400162ECC /* InitialViewUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewUITests.swift; sourceTree = "<group>"; };
 		880C49AD1F2A97CA00162ECC /* MessagesViewUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewUITests.swift; sourceTree = "<group>"; };
+		880C49B01F2A9B6D00162ECC /* InitialViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewModelTests.swift; sourceTree = "<group>"; };
+		880C49B61F2A9DDF00162ECC /* MessagesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewModelTests.swift; sourceTree = "<group>"; };
 		886CD7861F29C376002BE119 /* ReceivedMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedMessageCell.xib; sourceTree = "<group>"; };
 		886CD7881F29C6BC002BE119 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		886CD78A1F29CB20002BE119 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -76,7 +79,6 @@
 		88B7D5EC1F28790D00816C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88B7D5EE1F28790D00816C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88B7D5F31F28790D00816C21 /* RandomMessagingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomMessagingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88B7D5F71F28790D00816C21 /* RandomMessagingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMessagingAppTests.swift; sourceTree = "<group>"; };
 		88B7D5F91F28790D00816C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88B7D6021F287BA000816C21 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		88B7D6051F287BC600816C21 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -155,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				880C49AB1F2A94D400162ECC /* InitialViewUITests.swift */,
-				880C49A51F2A934500162ECC /* Info.plist */,
 				880C49AD1F2A97CA00162ECC /* MessagesViewUITests.swift */,
+				880C49A51F2A934500162ECC /* Info.plist */,
 			);
 			path = RandomMessagingAppUITests;
 			sourceTree = "<group>";
@@ -222,8 +224,9 @@
 		88B7D5F61F28790D00816C21 /* RandomMessagingAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				88B7D5F71F28790D00816C21 /* RandomMessagingAppTests.swift */,
 				88B7D5F91F28790D00816C21 /* Info.plist */,
+				880C49B01F2A9B6D00162ECC /* InitialViewModelTests.swift */,
+				880C49B61F2A9DDF00162ECC /* MessagesViewModelTests.swift */,
 			);
 			path = RandomMessagingAppTests;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 					88B7D5F21F28790D00816C21 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = FDQWYD8S6L;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 88B7D5DE1F28790D00816C21;
 					};
@@ -572,7 +576,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88B7D5F81F28790D00816C21 /* RandomMessagingAppTests.swift in Sources */,
+				880C49B71F2A9DDF00162ECC /* MessagesViewModelTests.swift in Sources */,
+				880C49B11F2A9B6D00162ECC /* InitialViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,11 +771,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FDQWYD8S6L;
 				INFOPLIST_FILE = RandomMessagingAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ymiletlli.RandomMessagingAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomMessagingApp.app/RandomMessagingApp";
 			};
@@ -782,6 +789,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FDQWYD8S6L;
 				INFOPLIST_FILE = RandomMessagingAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
