@@ -23,6 +23,4 @@ class MessagesResponse: BaseResponse {
 	override class func newInstance(_ jsonString: String)-> AnyObject? {
 		return Mapper<MessagesResponse>().map(JSONString: jsonString)
 	}
-
-	
 }

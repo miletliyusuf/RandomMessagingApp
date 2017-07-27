@@ -39,9 +39,12 @@ class MessagesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		//Sets navigation back title
 		viewModel.shared.setNavigationBackTitle(forNavigationController: self.navigationController!,
 		                                        withString: "Leave")
+		//Sets navigation title
 		title = (user?.nickname)!
+		
 		self.textViewMessageInput?.delegate = self
 		
 		initTableView()
@@ -54,12 +57,15 @@ class MessagesViewController: BaseViewController {
 		viewModel.shared.didLeaveButtonTapped = true
 	}
 
+	///Deinitialize observer of keypad
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: Custom Methods
 	
+	
+    /// Sets tableview requirements
     func initTableView() {
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
@@ -70,29 +76,39 @@ class MessagesViewController: BaseViewController {
 		self.tableView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MessagesViewController.didTableViewTapped)))
     }
 	
+	
+	/// Sends message
 	func sendMessage() {
 		let message = MessageModel(id: -1, text: (self.textViewMessageInput?.text)!, timestamp: NSDate().timeIntervalSince1970, user: user!)
 		self.arrayMessages!.append(message)
 		self.textViewMessageInput?.text = ""
 	}
 	
+	/// Hides keypad
 	func didTableViewTapped() {
 		self.textViewMessageInput?.resignFirstResponder()
 	}
 	
+	
+	/// Scrolls tableview to bottom message
+	///
+	/// - Parameter status: Bool value of animated situation
 	func scrollToBottom(isAnimated status:Bool) {
 		if self.arrayMessages != nil {
 			self.tableView?.scrollToRow(at: IndexPath.init(row: (self.arrayMessages?.count)! - 1, section: 0), at: .bottom, animated: status)
 		}
 	}
 	
+	
+    /// Handles keypad open situation
     func addObserverToKeypad() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardNotification(_:)),
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
     }
-    
+	
+	/// Sticks input view top of keypad
     func keyboardNotification(_ notification: Notification) {
         if let userInfo = notification.userInfo {
             let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as?     NSValue)?.cgRectValue
@@ -119,6 +135,7 @@ class MessagesViewController: BaseViewController {
 	
 	//MARK: Requests
 	
+	/// Messages request
 	func fetchFirstMessages() {
 		let r = MessagesRequest()
 		_ = MessagesDataService.messages(requestModel: r).subscribe(onNext: { (response) in

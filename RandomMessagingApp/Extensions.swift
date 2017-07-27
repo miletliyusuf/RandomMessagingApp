@@ -20,6 +20,10 @@ extension UITableView {
 }
 
 extension Double {
+	
+    /// Converts timestamp to required format
+    ///
+    /// - Returns: Returns string in *hh:mm a MM/dd/YYYY* format as String value
     func timestampToDateString() -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(self))
         let dateFormatter = DateFormatter()

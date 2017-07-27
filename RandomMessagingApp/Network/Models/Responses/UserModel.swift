@@ -37,6 +37,8 @@ class UserModel:BaseResponse,NSCoding {
         self.nickname = nickname
     }
 	
+	
+	//MARK: Decode - Encode Methods
 	required convenience init(coder aDecoder: NSCoder) {
 		let avatarUrl = aDecoder.decodeObject(forKey: "avatarUrl") as! String
 		let id:Int = aDecoder.decodeObject(forKey: "id") as! Int

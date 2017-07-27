@@ -12,6 +12,8 @@ class UserDefaultsHelper {
 	
 	private static let userKey = "user"
 	
+	
+	/// User value to save and get
 	static var user:UserModel? {
 		get {
 			if UserDefaults.standard.object(forKey: userKey) != nil {

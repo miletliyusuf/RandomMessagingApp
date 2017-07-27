@@ -9,7 +9,12 @@
 import RxSwift
 
 class MessagesDataService {
-    
+	
+	
+    /// Messages API request service
+    ///
+    /// - Parameter requestModel: Request model holds endpoint urls and request type
+    /// - Returns: Observable value
     class func messages(requestModel:MessagesRequest) -> Observable<AnyObject?> {
         return requestModel.startRequest()
     }
